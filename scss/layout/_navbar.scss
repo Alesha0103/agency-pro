@@ -1,0 +1,98 @@
+@use "../base/variables" as *;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    height: $nav-height;
+    background: rgba($white, 0.85);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid $border;
+    transition: box-shadow $transition-slow;
+
+    &--scrolled {
+        box-shadow: $shadow-violet-sm;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: $font-heading;
+        font-weight: 800;
+        font-size: 1.15rem;
+        color: $violet;
+        text-decoration: none;
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+
+        a {
+            font-size: 0.92rem;
+            font-weight: 500;
+            color: $text-mid;
+            text-decoration: none;
+            transition: color $transition-fast;
+
+            &:hover {
+                color: $violet;
+            }
+        }
+    }
+
+    &__button {
+        background: $orange;
+        color: $white;
+        padding: 0.55rem 1.4rem;
+        border-radius: $radius-pill;
+        font-family: $font-heading;
+        font-weight: 700;
+        font-size: 0.9rem;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition:
+            background $transition-base,
+            transform $transition-fast,
+            box-shadow $transition-fast;
+        display: inline-block;
+
+        &:hover {
+            background: $orange-light;
+            transform: translateY(-2px);
+            box-shadow: $shadow-orange;
+        }
+    }
+    
+    &__mobile-button {
+        display: none;
+    }
+}
+
+@media (max-width: $bp-tablet) {
+    .navbar {
+        &__links {
+            display: none;
+        }
+        &__desktop-button {
+            display: none;
+        }
+        &__mobile-button {
+            display: block;
+        }
+    }
+}

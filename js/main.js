@@ -43,7 +43,7 @@ function animateCounter(el) {
     requestAnimationFrame(step);
 }
 
-const statNums = document.querySelectorAll(".stat-num[data-target]");
+const statNums = document.querySelectorAll(".stats__number[data-target]");
 const statObserver = new IntersectionObserver(
     (entries) => {
         entries.forEach((e) => {
@@ -60,9 +60,34 @@ statNums.forEach((el) => statObserver.observe(el));
 // Form submit
 function handleSubmit(e) {
     e.preventDefault();
+
+    const nameInput = e.target.querySelector("#name");
+    const emailInput = e.target.querySelector("#email");
     const btn = e.target.querySelector("button");
+
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+
+    let isValid = true;
+
+    nameError.textContent = "";
+    emailError.textContent = "";
+
+    if (nameInput.value.trim().length < 3) {
+        nameError.textContent = "Name must be at least 3 characters.";
+        isValid = false;
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(emailInput.value.trim())) {
+        emailError.textContent = "Please enter a valid email.";
+        isValid = false;
+    }
+
+    if (!isValid) return;
+
     btn.textContent = "✓ Message Sent!";
     btn.style.background = "#22C55E";
+
     setTimeout(() => {
         btn.textContent = "Send Message";
         btn.style.background = "";
