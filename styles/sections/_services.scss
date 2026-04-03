@@ -103,6 +103,7 @@
 
     &__link {
         display: inline-block;
+        width: fit-content;
         font-family: $font-heading;
         font-weight: 600;
         font-size: 0.82rem;

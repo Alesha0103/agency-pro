@@ -617,6 +617,7 @@ h6 {
 }
 .services__link {
   display: inline-block;
+  width: fit-content;
   font-family: "Syne", sans-serif;
   font-weight: 600;
   font-size: 0.82rem;
@@ -820,6 +821,7 @@ h6 {
 .service-detail__hero h1 {
   max-width: 900px;
   margin-bottom: 1.2rem;
+  font-weight: 800;
 }
 .service-detail__hero p {
   max-width: 720px;
