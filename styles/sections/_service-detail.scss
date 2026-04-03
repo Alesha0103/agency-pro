@@ -1,0 +1,106 @@
+@use "../base/variables" as *;
+
+.service-detail {
+    &__hero {
+        min-height: 70vh;
+        background: linear-gradient(
+            135deg,
+            $violet-deep 0%,
+            $violet 55%,
+            $violet-light 100%
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: $detail-hero-padding;
+        text-align: center;
+        color: $white;
+
+        h1 {
+            max-width: 900px;
+            margin-bottom: 1.2rem;
+            font-weight: 800;
+        }
+
+        p {
+            max-width: 720px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: rgba($white, 0.8);
+        }
+    }
+
+    &__badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba($white, 0.12);
+        border: 1px solid rgba($white, 0.22);
+        color: $violet-extra-light;
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 0.45rem 1rem;
+        border-radius: $radius-3xl;
+        margin-bottom: 1.6rem;
+        backdrop-filter: blur(8px);
+    }
+
+    &__content {
+        background: $off-white;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    &__card {
+        background: $card-bg;
+        border-radius: $radius-3xl;
+        padding: 2rem;
+        border: 1px solid $border;
+        box-shadow: 0 12px 32px rgba(75, 35, 200, 0.06);
+
+        h2 {
+            text-align: left;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-family: $font-heading;
+            font-weight: 700;
+            color: $text-dark;
+        }
+
+        p {
+            color: $text-mid;
+            line-height: 1.8;
+            font-size: 0.96rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                position: relative;
+                padding-left: 1.4rem;
+                margin-bottom: 0.9rem;
+                color: $text-mid;
+                line-height: 1.7;
+
+                &::before {
+                    content: "•";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: $orange;
+                    font-size: 1.2rem;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}
