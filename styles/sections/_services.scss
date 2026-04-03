@@ -10,6 +10,8 @@
     }
 
     &__card {
+        display: flex;
+        flex-direction: column;
         background: $card-bg;
         border-radius: $radius-2xl;
         padding: 2rem;
@@ -96,6 +98,7 @@
         color: $text-mid;
         line-height: 1.6;
         margin-bottom: 1.4rem;
+        flex: 1;
     }
 
     &__link {

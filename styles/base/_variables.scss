@@ -5,6 +5,7 @@ $violet: #4b23c8;
 $violet-deep: #2d0e8a;
 $violet-mid: #5e35d8;
 $violet-light: #7b4fff;
+$violet-extra-light: #d4bcff;
 
 $orange: #ff6b1a;
 $orange-light: #ff8c3a;
@@ -56,7 +57,6 @@ $shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.3);
 $transition-fast: 0.2s;
 $transition-base: 0.25s;
 $transition-slow: 0.3s;
-$transition-long: 0.35s;
 
 // =========================
 // SPACING / LAYOUT
@@ -70,5 +70,5 @@ $detail-hero-padding: 140px 5vw 80px;
 // =========================
 // BREAKPOINTS
 // =========================
-$bp-tablet: 768px;
+$bp-tablet: 880px;
 $bp-mobile: 576px;

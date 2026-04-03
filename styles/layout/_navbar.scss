@@ -77,12 +77,22 @@
             box-shadow: $shadow-orange;
         }
     }
+    
+    &__mobile-button {
+        display: none;
+    }
 }
 
 @media (max-width: $bp-tablet) {
     .navbar {
         &__links {
             display: none;
+        }
+        &__desktop-button {
+            display: none;
+        }
+        &__mobile-button {
+            display: block;
         }
     }
 }

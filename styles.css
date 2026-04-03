@@ -157,10 +157,19 @@ h6 {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(255, 107, 26, 0.35);
 }
+.navbar__mobile-button {
+  display: none;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
   .navbar__links {
     display: none;
+  }
+  .navbar__desktop-button {
+    display: none;
+  }
+  .navbar__mobile-button {
+    display: block;
   }
 }
 .footer {
@@ -211,7 +220,7 @@ h6 {
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
   .footer {
     flex-direction: column;
     text-align: center;
@@ -494,7 +503,7 @@ h6 {
 /* =========================
    MEDIA QUERIES
    ========================= */
-@media (max-width: 768px) {
+@media (max-width: 880px) {
   .hero {
     flex-direction: column;
     text-align: center;
@@ -530,6 +539,8 @@ h6 {
   gap: 1.5rem;
 }
 .services__card {
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   border-radius: 20px;
   padding: 2rem;
@@ -602,6 +613,7 @@ h6 {
   color: #4a4768;
   line-height: 1.6;
   margin-bottom: 1.4rem;
+  flex: 1;
 }
 .services__link {
   display: inline-block;
@@ -652,7 +664,7 @@ h6 {
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
   .stats__inner {
     gap: 2.5rem;
   }
@@ -751,7 +763,7 @@ h6 {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 .contact__input {
@@ -786,6 +798,7 @@ h6 {
   font-size: 0.9rem;
   transition: all 0.25s;
   white-space: nowrap;
+  min-width: 235px;
 }
 .contact__button:hover {
   background: #ff8c3a;
@@ -820,7 +833,7 @@ h6 {
   gap: 0.5rem;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.22);
-  color: #7b4fff;
+  color: #d4bcff;
   font-size: 0.85rem;
   font-weight: 600;
   padding: 0.45rem 1rem;

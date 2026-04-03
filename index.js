@@ -1,3 +1,9 @@
+// Navbar scroll effect
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 20);
+});
+
 // Scroll reveal
 const reveals = document.querySelectorAll(".reveal");
 const observer = new IntersectionObserver(
