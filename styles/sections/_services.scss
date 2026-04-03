@@ -1,5 +1,7 @@
+@use "../base/variables" as *;
+
 .services {
-    background: var(--color-off-white);
+    background: $off-white;
 
     &__grid {
         display: grid;
@@ -8,13 +10,13 @@
     }
 
     &__card {
-        background: var(--color-card-bg);
-        border-radius: 20px;
+        background: $card-bg;
+        border-radius: $radius-2xl;
         padding: 2rem;
-        border: 1px solid var(--color-border);
+        border: 1px solid $border;
         transition:
-            transform 0.3s,
-            box-shadow 0.3s;
+            transform $transition-fast,
+            box-shadow $transition-fast;
         position: relative;
         overflow: hidden;
 
@@ -22,20 +24,16 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(
-                135deg,
-                var(--color-violet) 0%,
-                #7b4fff 100%
-            );
+            background: linear-gradient(135deg, $violet 0%, $violet-light 100%);
             opacity: 0;
-            transition: opacity 0.35s;
+            transition: opacity $transition-slow;
             border-radius: inherit;
             z-index: 0;
         }
 
         &:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 50px rgba(75, 35, 200, 0.18);
+            box-shadow: $shadow-violet-xl;
 
             &::after {
                 opacity: 1;
@@ -43,27 +41,29 @@
 
             .services__title,
             .services__description {
-                color: #fff;
+                color: $white;
+                transition: color $transition-slow;
             }
 
             .services__link {
                 background: rgba(255, 255, 255, 0.2);
                 border-color: rgba(255, 255, 255, 0.4);
-                color: #fff;
+                color: $white;
+                transition: all $transition-base;
             }
         }
 
         > * {
             position: relative;
             z-index: 1;
-            transition: color 0.35s;
+            transition: color $transition-slow;
         }
     }
 
     &__icon {
         width: 52px;
         height: 52px;
-        border-radius: 14px;
+        border-radius: $radius-lg;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -71,11 +71,11 @@
         font-size: 1.4rem;
 
         &--seo {
-            background: linear-gradient(135deg, #4b23c8, #7b4fff);
+            background: linear-gradient(135deg, $violet, $violet-light);
         }
 
         &--ppc {
-            background: linear-gradient(135deg, #ff6b1a, #ff3d00);
+            background: linear-gradient(135deg, $orange, #ff3d00);
         }
 
         &--smm {
@@ -84,37 +84,37 @@
     }
 
     &__title {
-        font-family: "Syne", sans-serif;
+        font-family: $font-heading;
         font-weight: 700;
         font-size: 1.1rem;
         margin-bottom: 0.6rem;
-        color: var(--color-text-dark);
+        color: $text-dark;
     }
 
     &__description {
         font-size: 0.9rem;
-        color: var(--color-text-mid);
+        color: $text-mid;
         line-height: 1.6;
         margin-bottom: 1.4rem;
     }
 
     &__link {
         display: inline-block;
-        font-family: "Syne", sans-serif;
+        font-family: $font-heading;
         font-weight: 600;
         font-size: 0.82rem;
-        color: var(--color-violet);
-        border: 1.5px solid var(--color-border);
-        border-radius: 20px;
+        color: $violet;
+        border: 1.5px solid $border;
+        border-radius: $radius-2xl;
         padding: 0.4rem 1.1rem;
         text-decoration: none;
-        transition: all 0.25s;
+        transition: all $transition-base;
         cursor: pointer;
 
         &:hover {
-            background: var(--color-violet);
-            color: #fff;
-            border-color: var(--color-violet);
+            background: $violet;
+            color: $white;
+            border-color: $violet;
         }
     }
 }

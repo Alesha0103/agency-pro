@@ -1,14 +1,16 @@
+@use "../base/variables" as *;
+
 .hero {
     min-height: 100vh;
     background: linear-gradient(
         135deg,
-        var(--color-violet-deep) 0%,
-        var(--color-violet) 55%,
-        #7b4fff 100%
+        $violet-deep 0%,
+        $violet 55%,
+        $violet-light 100%
     );
     display: flex;
     align-items: center;
-    padding: 100px 5vw 60px;
+    padding: $hero-padding;
     position: relative;
     overflow: hidden;
 
@@ -31,7 +33,7 @@
         &--one {
             width: 420px;
             height: 420px;
-            background: #7b4fff;
+            background: $violet-light;
             top: -100px;
             right: -80px;
             animation: drift 9s ease-in-out infinite alternate;
@@ -40,7 +42,7 @@
         &--two {
             width: 280px;
             height: 280px;
-            background: var(--color-orange);
+            background: $orange;
             bottom: -60px;
             left: 30%;
             animation: drift 12s ease-in-out infinite alternate-reverse;
@@ -57,13 +59,13 @@
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        background: rgba(255, 255, 255, 0.12);
-        border: 1px solid rgba(255, 255, 255, 0.22);
+        background: rgba($white, 0.12);
+        border: 1px solid rgba($white, 0.22);
         color: #d4bcff;
         font-size: 0.82rem;
         font-weight: 500;
         padding: 0.4rem 0.9rem;
-        border-radius: 20px;
+        border-radius: $radius-md;
         margin-bottom: 1.6rem;
         backdrop-filter: blur(8px);
         animation: fade-up 0.7s ease both;
@@ -72,27 +74,28 @@
             width: 6px;
             height: 6px;
             border-radius: 50%;
-            background: var(--color-orange);
+            background: $orange;
             display: inline-block;
         }
     }
 
     &__title {
+        font-family: $font-heading;
         font-weight: 800;
         font-size: clamp(2.4rem, 5vw, 3.8rem);
         line-height: 1.1;
-        color: #fff;
+        color: $white;
         margin-bottom: 1.2rem;
         animation: fade-up 0.7s 0.1s ease both;
 
         &-accent {
-            color: var(--color-orange-light);
+            color: $orange-light;
         }
     }
 
     &__subtitle {
         font-size: 1.05rem;
-        color: rgba(255, 255, 255, 0.75);
+        color: rgba($white, 0.75);
         line-height: 1.7;
         max-width: 440px;
         margin-bottom: 2.2rem;
@@ -120,40 +123,43 @@
         &--primary,
         &--outline {
             padding: 0.75rem 1.8rem;
-            border-radius: 30px;
-            font-family: "Syne", sans-serif;
+            border-radius: $radius-pill;
+            font-family: $font-heading;
             font-weight: 700;
             font-size: 0.95rem;
             text-decoration: none;
             display: inline-block;
-            transition: all 0.25s;
+            transition: all $transition-base;
         }
 
         &--primary {
-            background: var(--color-orange);
-            color: #fff;
+            background: $orange;
+            color: $white;
 
             &:hover {
-                background: var(--color-orange-light);
+                background: $orange-light;
                 transform: translateY(-3px);
-                box-shadow: 0 10px 28px rgba(255, 107, 26, 0.4);
+                box-shadow: $shadow-orange-lg;
             }
         }
 
         &--outline {
             background: transparent;
-            color: #fff;
-            border: 2px solid rgba(255, 255, 255, 0.45);
+            color: $white;
+            border: 2px solid rgba($white, 0.45);
 
             &:hover {
-                border-color: #fff;
-                background: rgba(255, 255, 255, 0.1);
+                border-color: $white;
+                background: rgba($white, 0.1);
                 transform: translateY(-3px);
             }
         }
     }
 }
 
+/* =========================
+   LAPTOP MOCKUP
+   ========================= */
 .laptop {
     &__wrap {
         position: relative;
@@ -165,8 +171,8 @@
         width: 100%;
         height: 250px;
         background: linear-gradient(135deg, #1a0b6b 0%, #3a1fa8 100%);
-        border-radius: 16px 16px 0 0;
-        border: 3px solid rgba(255, 255, 255, 0.25);
+        border-radius: $radius-xl $radius-xl 0 0;
+        border: 3px solid rgba($white, 0.25);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -178,7 +184,7 @@
         width: 90%;
         height: 88%;
         background: linear-gradient(135deg, #0f0635, #281480);
-        border-radius: 8px;
+        border-radius: $radius-md;
         display: flex;
         flex-direction: column;
         padding: 12px;
@@ -190,11 +196,11 @@
         height: 22px;
         background: linear-gradient(
             180deg,
-            rgba(255, 255, 255, 0.25),
-            rgba(255, 255, 255, 0.1)
+            rgba($white, 0.25),
+            rgba($white, 0.1)
         );
-        border-radius: 0 0 8px 8px;
-        border: 2px solid rgba(255, 255, 255, 0.15);
+        border-radius: 0 0 $radius-md $radius-md;
+        border: 2px solid rgba($white, 0.15);
         border-top: none;
     }
 
@@ -209,11 +215,14 @@
     }
 }
 
+/* =========================
+   MOCKUP BARS / IMAGES
+   ========================= */
 .mockup {
     &__bar {
         height: 8px;
-        background: rgba(255, 255, 255, 0.15);
-        border-radius: 4px;
+        background: rgba($white, 0.15);
+        border-radius: $radius-sm;
         width: 60%;
     }
 
@@ -226,8 +235,8 @@
 
     &__bar-small {
         height: 6px;
-        background: rgba(255, 255, 255, 0.08);
-        border-radius: 4px;
+        background: rgba($white, 0.08);
+        border-radius: $radius-sm;
 
         &--40 {
             width: 40%;
@@ -247,14 +256,14 @@
     &__image-box {
         flex: 1;
         height: 55px;
-        border-radius: 6px;
+        border-radius: $radius-sm;
 
         &:nth-child(1) {
-            background: linear-gradient(135deg, #ff6b1a, #ff3d00);
+            background: linear-gradient(135deg, $orange, #ff3d00);
         }
 
         &:nth-child(2) {
-            background: linear-gradient(135deg, #4b23c8, #7b4fff);
+            background: linear-gradient(135deg, $violet, $violet-light);
         }
 
         &:nth-child(3) {
@@ -263,11 +272,14 @@
     }
 }
 
+/* =========================
+   SOCIAL FLOATING BUTTONS
+   ========================= */
 .social-float {
     position: absolute;
-    border-radius: 14px;
+    border-radius: $radius-lg;
     padding: 10px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: $shadow-dark;
     animation: float-y 4s ease-in-out infinite;
     display: flex;
     align-items: center;
@@ -276,7 +288,7 @@
     svg {
         width: 20px;
         height: 20px;
-        fill: #fff;
+        fill: $white;
     }
 
     &--facebook {
@@ -321,11 +333,14 @@
     }
 }
 
-@media (max-width: 768px) {
+/* =========================
+   MEDIA QUERIES
+   ========================= */
+@media (max-width: $bp-tablet) {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 100px 5vw 60px;
+        padding: $hero-padding;
 
         &__subtitle {
             margin: 0 auto 2rem;

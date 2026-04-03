@@ -1,5 +1,7 @@
+@use "../base/variables" as *;
+
 .footer {
-    background: var(--color-text-dark);
+    background: $text-dark;
     padding: 2rem 5vw;
     display: flex;
     align-items: center;
@@ -9,7 +11,7 @@
 
     &__copy {
         font-size: 0.8rem;
-        color: rgba(255, 255, 255, 0.4);
+        color: rgba($white, 0.4);
     }
 
     &__links {
@@ -18,12 +20,12 @@
 
         a {
             font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba($white, 0.4);
             text-decoration: none;
-            transition: color 0.2s;
+            transition: color $transition-fast;
 
             &:hover {
-                color: #fff;
+                color: $white;
             }
         }
     }
@@ -37,25 +39,25 @@
         width: 34px;
         height: 34px;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.08);
+        background: rgba($white, 0.08);
         display: flex;
         align-items: center;
         justify-content: center;
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba($white, 0.5);
         text-decoration: none;
         font-size: 0.85rem;
         transition:
-            background 0.25s,
-            color 0.25s;
+            background $transition-base,
+            color $transition-base;
 
         &:hover {
-            background: var(--color-orange);
-            color: #fff;
+            background: $orange;
+            color: $white;
         }
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $bp-tablet) {
     .footer {
         flex-direction: column;
         text-align: center;

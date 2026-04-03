@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 .navbar {
     position: fixed;
     top: 0;
@@ -8,24 +10,24 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 5vw;
-    height: 68px;
-    background: rgba(255, 255, 255, 0.85);
+    height: $nav-height;
+    background: rgba($white, 0.85);
     backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--color-border);
-    transition: box-shadow 0.3s;
+    border-bottom: 1px solid $border;
+    transition: box-shadow $transition-slow;
 
     &--scrolled {
-        box-shadow: 0 4px 32px rgba(75, 35, 200, 0.1);
+        box-shadow: $shadow-violet-sm;
     }
 
     &__logo {
         display: flex;
         align-items: center;
         gap: 10px;
-        font-family: "Syne", sans-serif;
+        font-family: $font-heading;
         font-weight: 800;
         font-size: 1.15rem;
-        color: var(--color-violet);
+        color: $violet;
         text-decoration: none;
 
         svg {
@@ -42,42 +44,42 @@
         a {
             font-size: 0.92rem;
             font-weight: 500;
-            color: var(--color-text-mid);
+            color: $text-mid;
             text-decoration: none;
-            transition: color 0.2s;
+            transition: color $transition-fast;
 
             &:hover {
-                color: var(--color-violet);
+                color: $violet;
             }
         }
     }
 
     &__button {
-        background: var(--color-orange);
-        color: #fff;
+        background: $orange;
+        color: $white;
         padding: 0.55rem 1.4rem;
-        border-radius: 30px;
-        font-family: "Syne", sans-serif;
+        border-radius: $radius-pill;
+        font-family: $font-heading;
         font-weight: 700;
         font-size: 0.9rem;
         border: none;
         cursor: pointer;
         text-decoration: none;
         transition:
-            background 0.25s,
-            transform 0.2s,
-            box-shadow 0.2s;
+            background $transition-base,
+            transform $transition-fast,
+            box-shadow $transition-fast;
         display: inline-block;
 
         &:hover {
-            background: var(--color-orange-light);
+            background: $orange-light;
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(255, 107, 26, 0.35);
+            box-shadow: $shadow-orange;
         }
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $bp-tablet) {
     .navbar {
         &__links {
             display: none;
