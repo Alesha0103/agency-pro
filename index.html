@@ -344,18 +344,24 @@
             </p>
 
             <form class="contact__form reveal" onsubmit="handleSubmit(event)">
-                <input
-                    class="contact__input"
-                    type="text"
-                    placeholder="Your Name"
-                    required
-                />
-                <input
-                    class="contact__input"
-                    type="email"
-                    placeholder="Email Address"
-                    required
-                />
+                <div class="contact__input-container">
+                    <input
+                        id="name"
+                        class="contact__input"
+                        type="text"
+                        placeholder="Your Name"
+                    />
+                    <span id="nameError"></span>
+                </div>
+                <div class="contact__input-container">
+                    <input
+                        id="email"
+                        class="contact__input"
+                        type="email"
+                        placeholder="Email Address"
+                    />
+                    <span id="emailError"></span>
+                </div>
                 <button class="contact__button" type="submit">
                     Send Message
                 </button>

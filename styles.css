@@ -768,8 +768,9 @@ h6 {
   margin: 0 auto;
 }
 .contact__input {
-  flex: 1;
   min-width: 160px;
+  max-width: fit-content;
+  align-self: center;
   padding: 0.8rem 1.2rem;
   border-radius: 30px;
   border: 2px solid rgba(255, 255, 255, 0.25);
@@ -787,6 +788,15 @@ h6 {
 .contact__input:focus {
   border-color: rgba(255, 255, 255, 0.6);
 }
+.contact__input-container {
+  display: flex;
+  flex-direction: column;
+}
+.contact__input-container span {
+  color: #ff6961;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
 .contact__button {
   background: #ff6b1a;
   color: #ffffff;
@@ -800,6 +810,7 @@ h6 {
   transition: all 0.25s;
   white-space: nowrap;
   min-width: 235px;
+  height: fit-content;
 }
 .contact__button:hover {
   background: #ff8c3a;
