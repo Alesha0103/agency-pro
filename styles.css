@@ -657,41 +657,6 @@ h6 {
     gap: 2.5rem;
   }
 }
-.stats {
-  background: linear-gradient(135deg, var(--color-violet-deep), var(--color-violet));
-  padding: 60px 5vw;
-}
-.stats__inner {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  flex-wrap: wrap;
-}
-.stats__item {
-  text-align: center;
-}
-.stats__number {
-  font-family: "Syne", sans-serif;
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1;
-  margin-bottom: 0.3rem;
-}
-.stats__number span {
-  color: var(--color-orange-light);
-}
-.stats__label {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.65);
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .stats__inner {
-    gap: 2.5rem;
-  }
-}
 .projects {
   background: var(--color-off-white);
 }

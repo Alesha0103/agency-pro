@@ -1,83 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SEO Optimization — AgencyPro</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SEO Optimization — AgencyPro</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
-        rel="stylesheet" />
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
 
-    <link rel="stylesheet" href="../styles.css" />
-</head>
+    <body>
+        <nav class="navbar" id="navbar">
+            <a href="/" class="navbar__logo">
+                <svg
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect width="32" height="32" rx="8" fill="url(#lg)" />
+                    <path
+                        d="M8 22L14 10l4 8 4-5 2 9"
+                        stroke="#fff"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                    <defs>
+                        <linearGradient
+                            id="lg"
+                            x1="0"
+                            y1="0"
+                            x2="32"
+                            y2="32"
+                            gradientUnits="userSpaceOnUse"
+                        >
+                            <stop stop-color="#7B4FFF" />
+                            <stop offset="1" stop-color="#4B23C8" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                AgencyPro
+            </a>
 
-<body>
+            <a href="/" class="navbar__button">← Back Home</a>
+        </nav>
 
-    <nav class="navbar" id="navbar">
-        <a href="/" class="navbar__logo">
-            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="32" height="32" rx="8" fill="url(#lg)" />
-                <path d="M8 22L14 10l4 8 4-5 2 9" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                <defs>
-                    <linearGradient id="lg" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#7B4FFF" />
-                        <stop offset="1" stop-color="#4B23C8" />
-                    </linearGradient>
-                </defs>
-            </svg>
-            AgencyPro
-        </a>
+        <section class="service-detail__hero">
+            <div class="service-detail__badge">🔍 SEO Optimization</div>
+            <h1>Rank Higher. Get Found. Grow Organically.</h1>
+            <p>
+                Our SEO strategies are designed to increase your visibility in
+                search engines, drive targeted traffic, and turn visitors into
+                customers.
+            </p>
+        </section>
 
-        <a href="/" class="navbar__button">← Back Home</a>
-    </nav>
+        <section class="service-detail__content">
+            <div class="service-detail__grid">
+                <div class="service-detail__card">
+                    <h2>What’s Included</h2>
+                    <ul>
+                        <li>Keyword Research & Strategy</li>
+                        <li>On-Page SEO Optimization</li>
+                        <li>Technical SEO Audits</li>
+                        <li>Content Optimization</li>
+                        <li>Backlink Strategy</li>
+                        <li>Monthly Performance Reports</li>
+                    </ul>
+                </div>
 
-    <section class="service-detail__hero">
-        <div class="service-detail__badge">🔍 SEO Optimization</div>
-        <h1>Rank Higher. Get Found. Grow Organically.</h1>
-        <p>
-            Our SEO strategies are designed to increase your visibility in search engines,
-            drive targeted traffic, and turn visitors into customers.
-        </p>
-    </section>
-
-    <section class="service-detail__content">
-        <div class="service-detail__grid">
-            <div class="service-detail__card">
-                <h2>What’s Included</h2>
-                <ul>
-                    <li>Keyword Research & Strategy</li>
-                    <li>On-Page SEO Optimization</li>
-                    <li>Technical SEO Audits</li>
-                    <li>Content Optimization</li>
-                    <li>Backlink Strategy</li>
-                    <li>Monthly Performance Reports</li>
-                </ul>
+                <div class="service-detail__card">
+                    <h2>Why SEO Matters</h2>
+                    <p>
+                        SEO helps your business appear when people are actively
+                        searching for your services. That means higher-quality
+                        traffic, stronger brand trust, and long-term growth
+                        without relying only on paid ads.
+                    </p>
+                </div>
             </div>
+        </section>
 
-            <div class="service-detail__card">
-                <h2>Why SEO Matters</h2>
-                <p>
-                    SEO helps your business appear when people are actively searching for your
-                    services. That means higher-quality traffic, stronger brand trust, and
-                    long-term growth without relying only on paid ads.
-                </p>
-            </div>
-        </div>
-    </section>
+        <section class="contact" id="contact">
+            <h2 class="section-heading__title">
+                Ready to Boost Your Rankings?
+            </h2>
+            <p class="section-heading__subtitle">
+                Let’s build an SEO strategy that gets real results.
+            </p>
+            <a href="/#contact" class="hero__button hero__button--primary"
+                >Get a Quote</a
+            >
+        </section>
 
-    <section class="contact" id="contact">
-        <h2 class="section-heading__title">Ready to Boost Your Rankings?</h2>
-        <p class="section-heading__subtitle">
-            Let’s build an SEO strategy that gets real results.
-        </p>
-        <a href="/#contact" class="hero__button hero__button--primary">Get a Quote</a>
-    </section>
-
-    <script src="/index.js"></script>
-</body>
-
+        <script src="/index.js"></script>
+    </body>
 </html>
